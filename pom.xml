@@ -21,6 +21,9 @@
                         <execution>
                             <id>default-cli</id>
                             <configuration>
+							
+							<compressSite>false</compressSite>
+        
                                 <artifacts>
                                     <!-- specify your depencies here -->
                                     <!-- groupId:artifactId:version -->
