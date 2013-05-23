@@ -31,11 +31,12 @@
                                     <artifact><id>junit:junit:4.11</id></artifact>
 									<artifact><id>jfree:jfreechart-swt:1.0.9</id></artifact>
 									<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
-                                    <artifact><id>org.hamcrest:hamcrest-core:1.3</id></artifact>
-									<artifact><id>org.easytesting:fest-assert-core:2.0M10</id></artifact>
+                                 <!-- <artifact><id>org.hamcrest:hamcrest-core:1.3</id></artifact> -->
+								 <!-- <artifact><id>org.easytesting:fest-assert-core:2.0M10</id></artifact> -->
 									<artifact><id>com.google.guava:guava:14.0.1</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
+									<artifact><id>com.github:kryo:2.20</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
                                 </artifacts>
                             </configuration>
 						
@@ -69,5 +70,19 @@
                 <url>http://repo.reficio.org/maven/</url>
             </pluginRepository>
         </pluginRepositories>
+		
+		<repositories>
+            <repository>
+				<id>kryo</id>
+				<url>https://github.com/snooppy/hla-ems-mvn-repo/raw/master/kryo-repo</url>
+				<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>false</enabled>  
+				</snapshots>  
+			</repository>
+        </repositories>
+		
 
     </project>
