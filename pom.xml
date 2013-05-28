@@ -39,6 +39,7 @@
 									<artifact><id>com.google.guava:guava:14.0.1</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
+									<artifact><id>com.github:kryonet:2.20.1</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
 									<artifact><id>com.github:kryo:2.20</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
                                 </artifacts>
                             </configuration>
