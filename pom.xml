@@ -41,6 +41,11 @@
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
 									<artifact><id>com.github:kryonet:2.20.1</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
 									<artifact><id>com.github:kryo:2.20</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
+									
+									<!-- Orient DB -->
+									<artifact><id>com.orientechnologies:orient-commons:1.3.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-core:1.3.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-client:1.3.0</id></artifact> <!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
                                 </artifacts>
                             </configuration>
 						
