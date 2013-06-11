@@ -32,20 +32,24 @@
 									<artifact><id>cglib:cglib-nodep:2.2.2</id></artifact>
 									<artifact><id>org.objenesis:objenesis:1.2</id></artifact>
                                     <artifact><id>junit:junit:4.11</id></artifact>
+									
+									<!-- Used by Pulse -->		
 									<artifact><id>jfree:jfreechart-swt:1.0.9</id></artifact>
 									<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
-                                 <!-- <artifact><id>org.hamcrest:hamcrest-core:1.3</id></artifact> -->
-								 <!-- <artifact><id>org.easytesting:fest-assert-core:2.0M10</id></artifact> -->
+									
+									<!-- Generic Usage Throughout the Project -->
 									<artifact><id>com.google.guava:guava:14.0.1</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
-									<artifact><id>com.github:kryonet:2.20.1</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
-									<artifact><id>com.github:kryo:2.20</id></artifact> <!-- See: http://dmitrykrivenko.blogspot.de/2012/12/creating-your-own-maven-repository-on.html -->
-									
+						
+						
 									<!-- Orient DB -->
-									<artifact><id>com.orientechnologies:orient-commons:1.3.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-core:1.3.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-client:1.3.0</id></artifact> <!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
+									<artifact><id>com.orientechnologies:orient-commons:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-core:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-client:1.4.0</id></artifact> <!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
+									
+									<!-- Testdefense uses Netty as networking library -->
+									<artifact><id>io.netty:netty-all:4.0.0.CR3</id></artifact>
                                 </artifacts>
                             </configuration>
 						
