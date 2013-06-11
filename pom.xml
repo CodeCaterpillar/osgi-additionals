@@ -11,11 +11,6 @@
         <packaging>pom</packaging>
         <version>1.0.0</version>
 
-		<modules>
-			<module>orientdb</module>
-			<module>tests</module>
-		</modules>
-		
         <build>
             <plugins>
                 <plugin>
@@ -32,7 +27,12 @@
                                 <artifacts>
                                     <!-- specify your depencies here -->
                                     <!-- groupId:artifactId:version -->
-								
+                                    <artifact><id>org.spockframework:spock-core:0.7-groovy-2.0</id></artifact>
+									<artifact><id>org.codehaus.groovy:groovy-all:2.0.6</id></artifact>
+									<artifact><id>cglib:cglib-nodep:2.2.2</id></artifact>
+									<artifact><id>org.objenesis:objenesis:1.2</id></artifact>
+                                    <artifact><id>junit:junit:4.11</id></artifact>
+									
 									<!-- Used by Pulse -->		
 									<artifact><id>jfree:jfreechart-swt:1.0.9</id></artifact>
 									<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
@@ -43,11 +43,10 @@
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
 						
 						
-									<!-- Orient DB Wrapper-->
-									<artifact><id>de.unibonn.iai.se.codecaterpillar.3rd:orientdb:1.4.0</id></artifact>
-									
-									<!-- Test Dependency Wrapper -->
-									<artifact><id>de.unibonn.iai.se.codecaterpillar.3rd:tests:1.4.0</id></artifact>
+									<!-- Orient DB -->
+									<artifact><id>com.orientechnologies:orient-commons:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-core:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-client:1.4.0</id></artifact> <!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
 									
 									<!-- Testdefense uses Netty as networking library -->
 									<artifact><id>io.netty:netty-all:4.0.0.CR3</id></artifact>
