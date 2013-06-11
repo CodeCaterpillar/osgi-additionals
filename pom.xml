@@ -11,6 +11,9 @@
         <packaging>pom</packaging>
         <version>1.0.0</version>
 
+		<modules>
+			<module>orientdb</module>
+		</modules>
         <build>
             <plugins>
                 <plugin>
@@ -44,9 +47,7 @@
 						
 						
 									<!-- Orient DB -->
-									<artifact><id>com.orientechnologies:orient-commons:1.4.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-core:1.4.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-client:1.4.0</id></artifact> <!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
+									<artifact><id>de.unibonn.iai.se.codecaterpillar.3rd:de.unibonn.iai.se.codecaterpillar.3rd.orientdb:1.4.0</id></artifact>
 									
 									<!-- Testdefense uses Netty as networking library -->
 									<artifact><id>io.netty:netty-all:4.0.0.CR3</id></artifact>
@@ -61,19 +62,7 @@
                     </executions>
                 </plugin>
 
-                <plugin>
-                    <groupId>org.mortbay.jetty</groupId>
-                    <artifactId>jetty-maven-plugin</artifactId>
-                    <version>8.1.5.v20120716</version>
-                    <configuration>
-                        <scanIntervalSeconds>10</scanIntervalSeconds>
-                        <webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
-                        <webApp>
-                            <contextPath>/site</contextPath>
-                        </webApp>
-                   </configuration>
-                </plugin>
-
+               
             </plugins>
         </build>
 
