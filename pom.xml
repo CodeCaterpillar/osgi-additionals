@@ -11,11 +11,15 @@
         <packaging>pom</packaging>
         <version>1.0.0</version>
 
-		<modules>
-			<module>orientdb</module>
-		</modules>
         <build>
             <plugins>
+			<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>2.3.6</version>
+					<extensions>true</extensions>
+				</plugin>
+
                 <plugin>
                     <groupId>org.reficio</groupId>
                     <artifactId>p2-maven-plugin</artifactId>
@@ -47,7 +51,16 @@
 						
 						
 									<!-- Orient DB -->
-									<artifact><id>de.unibonn.iai.se.codecaterpillar.3rd:de.unibonn.iai.se.codecaterpillar.3rd.orientdb:1.4.0</id></artifact>
+									<!-- <artifact><id>edu.bonn.cs.codecaterpillar:orientdb:1.4.0</id></artifact>  --> <!-- all dependency of orient db -->
+									
+									
+									<artifact><id>com.orientechnologies:orient-commons:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-core:1.4.0</id></artifact>
+									<artifact><id>com.orientechnologies:orientdb-object:1.4.0</id></artifact>
+									
+									<artifact><id>com.orientechnologies:orientdb-client:1.4.0</id></artifact> 	<!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
+									
+								
 									
 									<!-- Testdefense uses Netty as networking library -->
 									<artifact><id>io.netty:netty-all:4.0.0.CR3</id></artifact>
@@ -73,18 +86,7 @@
             </pluginRepository>
         </pluginRepositories>
 		
-		<repositories>
-            <repository>
-				<id>kryo</id>
-				<url>https://github.com/snooppy/hla-ems-mvn-repo/raw/master/kryo-repo</url>
-				<releases>  
-					<enabled>true</enabled>  
-				</releases>  
-				<snapshots>  
-					<enabled>false</enabled>  
-				</snapshots>  
-			</repository>
-        </repositories>
+		
 		
 
     </project>
