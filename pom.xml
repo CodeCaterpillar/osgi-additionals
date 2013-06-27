@@ -35,7 +35,9 @@
                                     <!-- specify your depencies here -->
                                     <!-- groupId:artifactId:version -->
                                     <artifact><id>org.spockframework:spock-core:0.7-groovy-2.0</id></artifact>
-									<artifact><id>org.codehaus.groovy:groovy-all:2.0.7</id></artifact>
+									
+									<artifact><id>org.codehaus.groovy:groovy-all:2.0.7</id></artifact> <!-- used in 4.3 -->
+									<artifact><id>org.codehaus.groovy:groovy-all:2.0.6</id></artifact> <!-- used in 4.2 -->
 									<artifact><id>cglib:cglib-nodep:2.2.2</id></artifact>
 									<artifact><id>org.objenesis:objenesis:1.2</id></artifact>
                                     <artifact><id>junit:junit:4.11</id></artifact>
