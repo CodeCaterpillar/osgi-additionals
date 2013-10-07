@@ -23,7 +23,7 @@
                 <plugin>
                     <groupId>org.reficio</groupId>
                     <artifactId>p2-maven-plugin</artifactId>
-                    <version>1.0.3-SNAPSHOT</version>
+                    <version>1.0.1-SNAPSHOT</version>
                     <executions>
                         <execution>
                             <id>default-cli</id>
@@ -54,7 +54,7 @@
 								
 									
 									<!-- Testdefense uses Netty as networking library -->
-									<artifact><id>io.netty:netty-all:4.0.10.Final</id>  <source>true</source></artifact>
+									<artifact><id>io.netty:netty-all:4.0.0.CR3</id>   <source>true</source></artifact>
                                 </artifacts>
                             </configuration>
 						
