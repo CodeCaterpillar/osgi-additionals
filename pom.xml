@@ -23,7 +23,7 @@
                 <plugin>
                     <groupId>org.reficio</groupId>
                     <artifactId>p2-maven-plugin</artifactId>
-                    <version>1.0.1-SNAPSHOT</version>
+                    <version>1.0.3-SNAPSHOT</version>
                     <executions>
                         <execution>
                             <id>default-cli</id>
@@ -48,25 +48,13 @@
 									<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
 									
 									<!-- Generic Usage Throughout the Project -->
-									<artifact><id>com.google.guava:guava:14.0.1</id></artifact>
+									<artifact><id>com.google.guava:guava:14.0.1</id>  <source>true</source></artifact>
 									<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
 									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
-						
-						
-									<!-- Orient DB -->
-									<!-- <artifact><id>edu.bonn.cs.codecaterpillar:orientdb:1.4.0</id></artifact>  --> <!-- all dependency of orient db -->
-									
-									
-									<artifact><id>com.orientechnologies:orient-commons:1.4.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-core:1.4.0</id></artifact>
-									<artifact><id>com.orientechnologies:orientdb-object:1.4.0</id></artifact>
-									
-									<artifact><id>com.orientechnologies:orientdb-client:1.4.0</id></artifact> 	<!-- INCLUDE THIS IF YOU'RE CONNECTING TO THE SERVER THROUGH THE REMOTE ENGINE -->
-									
 								
 									
 									<!-- Testdefense uses Netty as networking library -->
-									<artifact><id>io.netty:netty-all:4.0.0.CR3</id></artifact>
+									<artifact><id>io.netty:netty-all:4.0.10.Final</id>  <source>true</source></artifact>
                                 </artifacts>
                             </configuration>
 						
