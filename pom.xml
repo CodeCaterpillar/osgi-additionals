@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <!-- Third party p2 repository is created via  "mvn package" or "mvn p2:site". -->
-	<!-- It can be accessed in target/repository                  -->
-	<!-- This should be only created on a build server and copied to a public available p2 for target resolution. -->
 	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001 XMLSchema-instance"
              xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
         <modelVersion>4.0.0</modelVersion>
@@ -26,46 +23,41 @@
                     <version>1.1.1-SNAPSHOT</version>
                     <executions>
                         <execution>
-                            <id>default-cli</id>
-                            <configuration>
-							
-							<compressSite>false</compressSite>
-        
-                                <artifacts>
-                                    <!-- specify your depencies here -->
-                                    <!-- groupId:artifactId:version -->
-                                    <artifact><id>org.spockframework:spock-core:0.7-groovy-2.0</id></artifact>
+                        <id>default-cli</id>
+			<phase>package</phase>   
+			<goals>	
+				<goal>site</goal>
+			</goals>
+                     
+			<configuration>			
+		          <compressSite>true</compressSite>
+			
+							                
+                          <artifacts>
+    	                    	<artifact><id>org.spockframework:spock-core:1.0-groovy-2.0-SNAPSHOT</id></artifact>							<artifact><id>org.codehaus.groovy:groovy-all:2.0.7</id></artifact> <!-- used in 4.3 -->
+				<!-- <artifact><id>org.codehaus.groovy:groovy-all:2.0.6</id></artifact> -->  <!-- used in 4.2 --> -
 									
-									<artifact><id>org.codehaus.groovy:groovy-all:2.0.7</id></artifact> <!-- used in 4.3 -->
-									<!-- <artifact><id>org.codehaus.groovy:groovy-all:2.0.6</id></artifact> -->  <!-- used in 4.2 --> -
+				<artifact><id>cglib:cglib-nodep:2.2.2</id></artifact>											<artifact><id>org.objenesis:objenesis:1.2</id></artifact>
+                                <artifact><id>junit:junit:4.11</id></artifact>
 									
-									<artifact><id>cglib:cglib-nodep:2.2.2</id></artifact>
-									<artifact><id>org.objenesis:objenesis:1.2</id></artifact>
-                                    <artifact><id>junit:junit:4.11</id></artifact>
+				<!-- Used by Pulse -->	
+				<artifact><id>jfree:jfreechart-swt:1.0.9</id></artifact>
+				<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
 									
-									<!-- Used by Pulse -->		
-									<artifact><id>jfree:jfreechart-swt:1.0.9</id></artifact>
-									<artifact><id>jfree:jfreechart:1.0.9</id></artifact>
-									
-									<!-- Generic Usage Throughout the Project -->
-									<artifact><id>com.google.guava:guava:14.0.1</id>  <source>true</source></artifact>
-									<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
-									<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
+				<!-- Generic Usage Throughout the Project -->
+				<artifact><id>com.google.guava:guava:16.0.1</id>  <source>true</source></artifact>
+				<artifact><id>com.google.inject.extensions:guice-assistedinject:3.0</id></artifact>
+				<artifact><id>com.google.inject.extensions:guice-multibindings:3.0</id></artifact>
 								
-									<artifact><id>org.glassfish.jersey.core:jersey-client:2.4.1</id></artifact>
-									<artifact><id>org.glassfish.jersey.core:jersey-server:2.4.1</id></artifact>
-									<artifact><id>org.glassfish.jersey.core:jersey-common:2.4.1</id></artifact>
+				<artifact><id>org.glassfish.jersey.core:jersey-client:2.4.1</id></artifact>
+				<artifact><id>org.glassfish.jersey.core:jersey-server:2.4.1</id></artifact>
+				<artifact><id>org.glassfish.jersey.core:jersey-common:2.4.1</id></artifact>
 									
-									<!-- Testdefense uses Netty as networking library -->
-									<artifact><id>io.netty:netty-all:4.0.0.CR3</id>   <source>true</source></artifact>
-                                </artifacts>
-                            </configuration>
-						
-							<phase>package</phase>
-							<goals>
-								<goal>site</goal>
-							</goals>
-                        </execution>
+				<!-- Testdefense uses Netty as networking library -->
+				<artifact><id>io.netty:netty-all:4.0.0.CR3</id>   <source>true</source></artifact>
+                          </artifacts>
+                        </configuration>			
+		        </execution>
                     </executions>
                 </plugin>
 
@@ -80,7 +72,11 @@
             </pluginRepository>
         </pluginRepositories>
 		
-		
-		
+	<repositories>
+		<repository>
+			<id>spock-snapshot</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/org/spockframework/</url>		
+		</repository>
+	</repositories>		
 
     </project>
